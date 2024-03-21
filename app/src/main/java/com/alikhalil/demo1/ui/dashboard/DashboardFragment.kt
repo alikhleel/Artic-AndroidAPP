@@ -42,7 +42,7 @@ class DashboardFragment : Fragment() {
         artWork.observe(this.viewLifecycleOwner, Observer { uiState ->
             when (uiState) {
                 is UIState.Success -> {
-//                    binding.textDashboard.text = uiState.responseData?.
+                    binding.textDashboard.text = uiState.responseData?.data?.get(5)?.title
                 }
 
                 is UIState.Empty -> {

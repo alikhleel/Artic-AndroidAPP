@@ -3,6 +3,11 @@ package com.alikhalil.demo1.data.model
 import com.google.gson.annotations.SerializedName
 
 data class ExhibitionResponse(
+    @SerializedName("data")
+    var data: ArrayList<ExhibitionData> = arrayListOf(),
+)
+
+data class ExhibitionData(
     @SerializedName("id") var id: Int? = null,
     @SerializedName("title") var title: String? = null,
     @SerializedName("image_url") var imageUrl: String? = null,
